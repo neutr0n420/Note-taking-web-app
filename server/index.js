@@ -34,7 +34,7 @@ app.get('/api/notes', (request, response)=>{
 app.get('/api/notes/:id', (request, response) =>{
     const id = Number(request.params.id)
 
-    console.log(id)
+    
     // const note = notes.find(note => note.id === id)
     const note = notes.find(note => note.id === id)
     console.log(note)
@@ -72,7 +72,6 @@ app.post('/api/notes', (request, response)=>{
     }
     notes = notes.concat(note)
 
-    console.log(note)
     response.json(note)
 })
 
