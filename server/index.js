@@ -8,19 +8,20 @@ let notes = [
         id: 1,
         content: "HTML is easy",
         important: true
-      },
-      {
+    },
+    {
         id: 2,
         content: "Browser can execute only JavaScript",
         important: false
-      },
-      {
+    },
+    {
         id: 3,
         content: "Get and POST are the most important methods of HTTP protocol",
         important: true
-      }
+    }
 ]
 
+app.use(express.static('dist'))
 app.use(cors())
 app.get('/', (reqeust, response) =>{
     response.send('<h1>Hello world!</h1>')
